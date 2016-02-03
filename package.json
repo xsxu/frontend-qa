@@ -1,0 +1,45 @@
+{
+  "name": "front-qa",
+  "description": "Frontend Develop Q&A",
+  "version": "0.0.1",
+  "author": {
+    "name": "xsxz",
+    "email": "xsxuzhu@aliyun.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xsxu/frontend-qa.git"
+  },
+  "homepage": "https://github.com/xsxu/frontend-qa",
+  "keywords": [
+    "frontend"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "remarkable": "^1.6.1"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "frontend-qa.html",
+    "frontend-qa.md",
+    "main.js"
+  ],
+  "scripts": {
+    "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/ test/acceptance/",
+    "test-tap": "mocha --require test/support/env --reporter tap --check-leaks test/ test/acceptance/"
+  },
+  "gitHead": "ced75109e0096aad7611f48572511b37a0d09f90",
+  "bugs": {
+    "url": "https://github.com/xsxu/frontend-qa/issues"
+  },
+  "readme": "ERROR: No README data found!"
+}
